@@ -1,7 +1,14 @@
+// protect.js
+
 const secretCode = process.env.CODE;
 
+document.addEventListener('DOMContentLoaded', function () {
+  const submitButton = document.getElementById('submitButton');
+  submitButton.addEventListener('click', checkPassword);
+});
+
 function checkPassword() {
-  console.log("function called")
+  console.log('Function called');
   const userInput = document.getElementById('secretCode').value;
   if (userInput === secretCode) {
     window.location.href = 'Main.html';
