@@ -6,15 +6,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($entered_code === $correct_code) {
         
-        include "index.html"; 
+        include "main.html"; 
         exit;
     } else {
         
-        header("Location: login.html");
+        header("Location: index.html");
         exit;
     }
 } else {
     
-    header("Location: login.html");
+    header("Location: index.html");
     exit;
 }
