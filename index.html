@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <img id="x" src="imgs/NotHere.jpeg">
-    <p>Code:</p>
-    <form id="password" class="password">
-      <input type="password">
-      <input type="submit">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Access Code</title>
+</head>
+<body>
+  <img id="x" src="imgs/NotHere.jpeg">
+    <form action="verify_code.php" method="post">
+        <label for="access_code">Enter Access Code:</label>
+        <input type="password" id="access_code" name="access_code" required>
+        <button type="submit">Submit</button>
     </form>
-  </body>
+</body>
 </html>
+
 
 <!--  
       .-.,     ,.-.
