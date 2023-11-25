@@ -1,6 +1,7 @@
 const secretCode = process.env.CODE;
 
 function checkPassword() {
+  console.log("function called")
   const userInput = document.getElementById('secretCode').value;
   if (userInput === secretCode) {
     window.location.href = 'Main.html';
