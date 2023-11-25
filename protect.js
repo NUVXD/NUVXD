@@ -9,6 +9,9 @@ function checkPassword() {
   }
 }
 
-if (window.location.pathname.includes('Main.html') && userInput !== secretCode) {
+// Check if the user manually visits the secret page
+if (window.location.pathname.includes('Main.html') && secretCode === undefined) {
   window.location.href = 'Index.html';
+} else if (window.location.pathname.includes('Index.html') && secretCode !== undefined) {
+  window.location.href = 'Main.html';
 }
