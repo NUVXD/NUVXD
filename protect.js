@@ -10,9 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
 function checkPassword() {
   console.log('Function called');
   const userInput = document.getElementById('secretCode').value;
+  console.log('User input:', userInput);
+  console.log('Secret code:', secretCode);
+
   if (userInput === secretCode) {
+    console.log('Redirecting to Main.html');
     window.location.href = 'Main.html';
   } else {
+    console.log('Access denied!');
     alert('Access denied!');
   }
 }
