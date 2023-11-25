@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function checkPassword() {
   console.log('Function called');
-  const userInput = document.getElementById('secretCode').value;
+  const userInput = document.getElementById('secretCode').value.trim(); // Trim whitespace
   console.log('User input:', userInput);
   console.log('Secret code:', secretCode);
 
@@ -24,7 +24,9 @@ function checkPassword() {
 
 // Check if the user manually visits the secret page
 if (window.location.pathname.includes('Main.html') && secretCode === undefined) {
+  console.log('Manual visit to secret page. Redirecting to Index.html');
   window.location.href = 'Index.html';
 } else if (window.location.pathname.includes('Index.html') && secretCode !== undefined) {
+  console.log('Manual visit to access page. Redirecting to Main.html');
   window.location.href = 'Main.html';
 }
