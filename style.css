@@ -1,6 +1,9 @@
 #x {
     height: 50%;
     width: 50%;
-    position: relative;
+    -ms-flex-align: center;
+}
+
+#password {
     -ms-flex-align: center;
 }
