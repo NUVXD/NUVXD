@@ -8,11 +8,12 @@
 </head>
 <body>
   <img id="x" src="imgs/NotHere.jpeg">
-    <form action="verify_code.php" method="post">
-        <label for="access_code">Enter Access Code:</label>
-        <input type="password" id="access_code" name="access_code" required>
-        <button type="submit">Submit</button>
-    </form>
+  <form id="passwordForm">
+    <label for="secretCode">Enter the secret code:</label>
+    <input type="password" id="secretCode" name="secretCode" required>
+    <button type="button" onclick="checkPassword()">Submit</button>
+  </form>
+    <script src="protect.js"></script>
 </body>
 </html>
 
