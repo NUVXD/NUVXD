@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Create directory
+        run: mkdir -p src
+
       - name: Inject secret into script
         run: echo "window.GITHUB_SECRET = '${{ secrets.CODE }}';" > src/secret.js
 
