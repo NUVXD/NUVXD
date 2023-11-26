@@ -18,6 +18,7 @@ function checkPassword() {
   console.log('Function called');
   const userInput = document.getElementById('secretCode').value.trim();
   const githubSecret = window.GITHUB_SECRET || 'fallback-secret';
+  console.log('GitHub Secret:', githubSecret);
 
   if (userInput === githubSecret) {
     console.log('Redirecting to Main.html');
