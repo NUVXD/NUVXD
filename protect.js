@@ -1,13 +1,17 @@
-// protect.js
-
 document.addEventListener('DOMContentLoaded', function () {
   const submitButton = document.getElementById('submitButton');
-  submitButton.addEventListener('click', checkPassword);
+
+  if (submitButton) {
+    submitButton.addEventListener('click', checkPassword);
+  } else {
+    console.error('Error: Submit button not found');
+  }
 });
 
 function checkPassword() {
+  console.log('Function called');
   const userInput = document.getElementById('secretCode').value.trim();
-  const githubSecret = window.GITHUB_SECRET || 'fallback-secret'; // Use a fallback or handle missing secret gracefully
+  const githubSecret = window.GITHUB_SECRET || 'fallback-secret';
 
   if (userInput === githubSecret) {
     window.location.href = 'Main.html';
