@@ -13,21 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Create directory
-        run: mkdir -p src
-
-      - name: Inject secret into script
-        run: echo "window.GITHUB_SECRET = '${{ secrets.CODE }}';" > src/secret.js
-
       - name: Build
-        run: |
-          cd $GITHUB_WORKSPACE # Change to the root directory
-          npm run build
+        run: npm run build

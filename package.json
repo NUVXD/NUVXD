@@ -1,0 +1,7 @@
+{
+    "name": "zone",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "echo 'No build step needed for a static HTML and JS project.'"
+    }
+  }
