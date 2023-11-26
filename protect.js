@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const submitButton = document.getElementById('submitButton');
 
   if (submitButton) {
-    submitButton.addEventListener('click', checkPassword);
+    console.log('Submit button found. Adding event listener.');
+    submitButton.addEventListener('click', function () {
+      console.log('Button clicked. Calling checkPassword.');
+      checkPassword();
+    });
   } else {
     console.error('Error: Submit button not found');
   }
@@ -14,8 +18,10 @@ function checkPassword() {
   const githubSecret = window.GITHUB_SECRET || 'fallback-secret';
 
   if (userInput === githubSecret) {
+    console.log('Redirecting to Main.html');
     window.location.href = 'Main.html';
   } else {
+    console.log('Access denied!');
     alert('Access denied!');
   }
 }
