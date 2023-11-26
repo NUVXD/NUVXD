@@ -28,4 +28,6 @@ jobs:
         run: echo "window.GITHUB_SECRET = '${{ secrets.CODE }}';" > src/secret.js
 
       - name: Build
-        run: npm run build
+        run: |
+          cd $GITHUB_WORKSPACE # Change to the root directory
+          npm run build
